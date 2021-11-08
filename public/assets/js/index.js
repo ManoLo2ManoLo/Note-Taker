@@ -1,3 +1,5 @@
+//const $noteList = document.querySelector('#noteList');
+
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -74,7 +76,7 @@ const handleNoteSave = () => {
   saveNote(newNote).then(() => {
     getAndRenderNotes();
     renderActiveNote();
-  });
+  }); 
 };
 
 // Delete the clicked note
@@ -118,7 +120,8 @@ const handleRenderSaveBtn = () => {
 
 // Render the list of note titles
 const renderNoteList = async (notes) => {
-  let jsonNotes = await notes.json();
+  console.log(notes);
+  let jsonNotes = await notes;
   if (window.location.pathname === '/notes') {
     noteList.forEach((el) => (el.innerHTML = ''));
   }
@@ -171,7 +174,54 @@ const renderNoteList = async (notes) => {
 };
 
 // Gets notes from the db and renders them to the sidebar
-const getAndRenderNotes = () => getNotes().then(renderNoteList);
+const getAndRenderNotes = () => {
+  getNotes()
+  .then (response => {
+    if(response.ok) {
+      response.json().then (function(data) {
+        renderNoteList(data)
+      });
+    } 
+  })
+}
+
+/*
+const getAndRenderNotes = (formData = {}) => {
+  let queryUrl = '/api/notes';
+
+  Object.entries(formData).forEach(([key, value]) => {
+    queryUrl += `${key}=${value}&`;
+  });
+
+  fetch(queryUrl)
+  .then (response => {
+    if(!response.ok) {
+      return alert(`Error: ${response.statusText}`)
+    }
+    return response.json();
+  })
+  .then(noteArr => {
+    console.log(noteArr);
+    renderNOteL(noteArr);
+  });
+};
+
+const printNotes = resultArr => {
+  console.log(resultArr);
+
+  const notesHTML = resultArr.map(({id, title, text}) => {
+    return `
+    <div class="row">
+      <div class="col-12 data-id=${id}>
+        <h4>${title}</h4><br/>
+        <p>${text}</p>
+      </div>
+    </div>
+    `;
+  });
+  $noteList.innerHTML = notesHTML.join('');
+}
+*/
 
 if (window.location.pathname === '/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave);

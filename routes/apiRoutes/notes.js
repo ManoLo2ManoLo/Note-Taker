@@ -3,7 +3,11 @@ const {
     createNotes,
     validateNotes
 } = require('../../lib/notes')
-const { notes } = require('../../data/notes');
+const { notes } = require('../../data/db');
+
+router.get('/notes', (req, res) => {
+    res.json(notes);
+})
 
 router.post('/notes', (req, res) => {
     req.body.id = notes.length.toString();
