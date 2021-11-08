@@ -185,44 +185,6 @@ const getAndRenderNotes = () => {
   })
 }
 
-/*
-const getAndRenderNotes = (formData = {}) => {
-  let queryUrl = '/api/notes';
-
-  Object.entries(formData).forEach(([key, value]) => {
-    queryUrl += `${key}=${value}&`;
-  });
-
-  fetch(queryUrl)
-  .then (response => {
-    if(!response.ok) {
-      return alert(`Error: ${response.statusText}`)
-    }
-    return response.json();
-  })
-  .then(noteArr => {
-    console.log(noteArr);
-    renderNOteL(noteArr);
-  });
-};
-
-const printNotes = resultArr => {
-  console.log(resultArr);
-
-  const notesHTML = resultArr.map(({id, title, text}) => {
-    return `
-    <div class="row">
-      <div class="col-12 data-id=${id}>
-        <h4>${title}</h4><br/>
-        <p>${text}</p>
-      </div>
-    </div>
-    `;
-  });
-  $noteList.innerHTML = notesHTML.join('');
-}
-*/
-
 if (window.location.pathname === '/notes') {
   saveNoteBtn.addEventListener('click', handleNoteSave);
   newNoteBtn.addEventListener('click', handleNewNoteView);

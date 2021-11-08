@@ -1,29 +1,34 @@
 {
-    "notes": [
-        {
-            "title":"Notes #1",
-            "text":"This is for Notes #1",
-            "id": 1
-        },
-        {
-            "title":"Notes #2",
-            "text":"This is for Notes #2",
-            "id": 2
-        },
-        {
-            "title":"Notes #3",
-            "text":"This is for Notes #3",
-            "id": 3
-        },
-        {
-            "title":"Notes #4",
-            "text":"This is for Notes #4",
-            "id": 4
-        },
-        {
-            "title":"Notes #5",
-            "text":"This is for Notes #5",
-            "id": 5
-        }
-    ]
+  "notesArray": [
+    {
+      "title": "Notes #1",
+      "text": "This is for Notes #1",
+      "id": 1
+    },
+    {
+      "title": "Notes #2",
+      "text": "This is for Notes #2",
+      "id": 2
+    },
+    {
+      "title": "Notes #3",
+      "text": "This is for Notes #3",
+      "id": 3
+    },
+    {
+      "title": "Notes #4",
+      "text": "This is for Notes #4",
+      "id": 4
+    },
+    {
+      "title": "Notes #5",
+      "text": "This is for Notes #5",
+      "id": 5
+    },
+    {
+      "title": "This is an added Note",
+      "text": "We are just testing to make sure the application is fully fuctional",
+      "id": "5"
+    }
+  ]
 }
