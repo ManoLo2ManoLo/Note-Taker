@@ -1,8 +1,24 @@
 {
     "notesArray": [
         {
-            "title":"Test Title",
-            "text":"Test text"
+            "title":"Notes #1",
+            "text":"This is for Notes #1"
+        },
+        {
+            "title":"Notes #2",
+            "text":"This is for Notes #2"
+        },
+        {
+            "title":"Notes #3",
+            "text":"This is for Notes #3"
+        },
+        {
+            "title":"Notes #4",
+            "text":"This is for Notes #4"
+        },
+        {
+            "title":"Notes #5",
+            "text":"This is for Notes #5"
         }
     ]
 }

@@ -1,4 +1,19 @@
 const router = require('express').Router();
-const { data } = require('../../data/db');
+const {
+    createNotes,
+    validateNotes
+} = require('../../lib/notes')
+const { notes } = require('../../data/notes');
+
+router.post('/notes', (req, res) => {
+    req.body.id = notes.length.toString();
+
+    if(!validateNotes(req.body)) {
+        res.status(400).send('This notes is note not properly formatted.')
+    } else {
+        const note = createNotes(req.body, notes)
+        res.json(note);
+    }
+})
 
 module.exports = router;
