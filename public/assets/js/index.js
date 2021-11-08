@@ -1,5 +1,3 @@
-//const $noteList = document.querySelector('#noteList');
-
 let noteTitle;
 let noteText;
 let saveNoteBtn;
@@ -120,7 +118,6 @@ const handleRenderSaveBtn = () => {
 
 // Render the list of note titles
 const renderNoteList = async (notes) => {
-  console.log(notes);
   let jsonNotes = await notes;
   if (window.location.pathname === '/notes') {
     noteList.forEach((el) => (el.innerHTML = ''));

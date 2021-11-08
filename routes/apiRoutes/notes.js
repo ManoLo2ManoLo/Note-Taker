@@ -6,10 +6,12 @@ const {
 } = require('../../lib/notes')
 const { notesArray } = require('../../data/db');
 
+// route to get notes from db.json
 router.get('/notes', (req, res) => {
     res.json(notesArray);
 })
 
+// route to get note based on note's id
 router.get('/notes/:id', (req, res) => {
     const result = findById(req.params.id, notesArray);
     if (result) {
@@ -19,6 +21,7 @@ router.get('/notes/:id', (req, res) => {
     }
 });
 
+// route to post onto db.json
 router.post('/notes', (req, res) => {
     req.body.id = notesArray.length.toString();
 
