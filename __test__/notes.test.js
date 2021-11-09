@@ -1,9 +1,9 @@
-const { findById, createNotes, validateNotes } = require('../lib/notes.js');
+const { findToDelete, createNotes, validateNotes } = require('../lib/notes.js');
 const { notesArray } = require('../data/db');
 
 jest.mock('fs');
 
-test('finding notes from id', () => {
+test('finding notes to delete', () => {
     const notes = [
         {
             "title": "Call Doctors",
@@ -22,10 +22,10 @@ test('finding notes from id', () => {
         },
     ]
 
-    const result = findById('5', notes);
+    const result = findToDelete('5', notes);
 
-    expect(result.title).toBe('Doggy Day Plans');
-    expect(result.text).toBe('Take Bella to dog park.');
+    expect(result.title).toBe(undefined);
+    expect(result.text).toBe(undefined);
 });
 
 test('creating a not', () => {

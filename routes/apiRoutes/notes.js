@@ -1,6 +1,8 @@
+const fs = require('fs');
 const router = require('express').Router();
+const path = require('path');
 const {
-    findById,
+    findToDelete,
     createNotes,
     validateNotes
 } = require('../../lib/notes')
@@ -12,10 +14,14 @@ router.get('/notes', (req, res) => {
 })
 
 // route to get note based on note's id
-router.get('/notes/:id', (req, res) => {
-    const result = findById(req.params.id, notesArray);
+router.delete('/notes/:id', (req, res) => {
+    const result = findToDelete(req.params.id, notesArray);
     if (result) {
-        res.json(result);
+        fs.writeFileSync(
+            path.join(__dirname, '../../data/db.json'),
+            JSON.stringify( { notesArray:[result] }, null, 2)
+        );
+        res.send(200)
     } else {
         res.send(404);
     }

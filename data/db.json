@@ -1,9 +1,11 @@
 {
   "notesArray": [
-    {
-      "title": "Notes #1",
-      "text": "This is for Notes #1",
-      "id": "0"
-    }
+    [
+      {
+        "title": "Test Title",
+        "text": "Test Text",
+        "id": "0"
+      }
+    ]
   ]
 }
