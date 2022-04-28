@@ -1,11 +1,13 @@
 # Note Taker Starter Code
 
-## Link Section
-Link to Github Repository: https://github.com/ManoLo2ManoLo/Note-Taker.git <br />
+## Link(s)
 Link to Application: https://manolo-notes.herokuapp.com/
 
 ## Table of Contents
 * [Description](#description)
+* [Clone Repository](#clone-repository)
+* [Install Dependencies](#install-dependencies)
+* [Start Application](#start-application)
 * [Screenshot](#screenshot)
 * [Credit](#credit)
 * [License](#license)
@@ -14,6 +16,17 @@ Link to Application: https://manolo-notes.herokuapp.com/
 This application is a note taker app. When a user first enter our application's url, then they are presenting with a home screen with a 'get started' button. When it is clicked, you are presented with the application. When the user enters a title and text to the note, then are able to save the note into the server. Then the page is updated with the notes saved to the left. So if the user were to click on the any of the previous saved notes, then they that notes will be prompted on the screen on the title and text section. The also has the capability to delete the notes if they click the trash button that is next to the listed notes.
 
 If you want to distingush if it is a saved note or a note ready to be saved, the saved notes will be in gray text. Meanwhile the notes that are ready to be saved have black text.
+
+## Clone Repository
+* git clone https://github.com/ManoLo2ManoLo/Note-Taker.git
+
+## Install Dependencies
+* All NPM packages required for this application are already listed as dependencies in the package.json file. Run the
+command 'npm i' command in your terminal at the root directory level to install the packages.
+* Ensure you have Node.js installed on your machine. The budget tracker application will be invoked by entering node server.js in the command line.
+
+## Start Application
+* You will see the App running on port 3001! in the console. You can then view the app on http://localhost:3001/.
 
 ## Screenshot
 This screenshot displays what the user will see ass soon as they load up our application. <br />
@@ -31,15 +44,13 @@ This screenshot displays that the notes can be deleted if the trash button is pr
 
 
 ## Credit
-The starter code for Note Taker was created by Rutgers' Coding Bootcamp, and was edited and revised by Manuel Canas-Menedez to meet an assignment requirements.
+The starter code for Note Taker was created by Rutgers' Coding Bootcamp, and was edited and revised by Manuel Canas-Menendez (ManoLo2ManoLo). <br />
+
+* [Github](https://github.com/ManoLo2ManoLo)
+* [Portfolio](https://manolo2manolo.github.io/React-Portfolio/)
+* [LinkedIn](https://www.linkedin.com/in/manuel-canas-menendez-33354b21b/)
 
 ## License
-MIT License
-
-Copyright (c) 2021 Manuel Canas-Menendez
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+<p align="center">
+    <img align="center" src="https://img.shields.io/github/license/ManoLo2ManoLo/Coding-Quiz?style=for-the-badge" alt="license" />
+</p>
